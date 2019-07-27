@@ -1,5 +1,6 @@
 package Q4_02_Minimal_Tree;
 
+import CtCILibrary.BTreePrinter;
 import CtCILibrary.TreeNode;
 
 public class Question {	
@@ -11,6 +12,7 @@ public class Question {
 		System.out.println("Root? " + root.data);
 		System.out.println("Created BST? " + root.isBST());
 		System.out.println("Height: " + root.height());
+		BTreePrinter.printNode(root);
 	}
 
 }
