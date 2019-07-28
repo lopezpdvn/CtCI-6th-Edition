@@ -3,6 +3,7 @@ package Q4_09_BST_Sequences;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
+import CtCILibrary.BTreePrinter;
 import CtCILibrary.TreeNode;
 
 public class Question {
@@ -63,12 +64,14 @@ public class Question {
 	}
 
 	public static void main(String[] args) {
-		TreeNode node = new TreeNode(100);
-		int[] array = {100, 50, 20, 75, 150, 120, 170};
-		for (int a : array) {
-			node.insertInOrder(a);
+		//int[] array = {100, 50, 20, 75, 150, 120, 170};
+		int[] array = {3,1,2,4,5};
+		TreeNode root = new TreeNode(array[0]);
+		for (int i = 1; i < array.length; i++) {
+			root.insertInOrder(array[i]);
 		}
-		ArrayList<LinkedList<Integer>> allSeq = allSequences(node);
+		BTreePrinter.printNode(root);
+		ArrayList<LinkedList<Integer>> allSeq = allSequences(root);
 		for (LinkedList<Integer> list : allSeq) {
 			System.out.println(list);
 		}
