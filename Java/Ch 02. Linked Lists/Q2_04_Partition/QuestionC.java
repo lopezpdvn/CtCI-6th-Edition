@@ -28,25 +28,32 @@ public class QuestionC {
 	}
 	
 	public static void main(String[] args) {
-		int length = 20;
+		int length = 7;
 		LinkedListNode[] nodes = new LinkedListNode[length];
-		for (int i = 0; i < length; i++) {
-			nodes[i] = new LinkedListNode(i >= length / 2 ? length - i - 1 : i, null, null);
-		}
-		
-		for (int i = 0; i < length; i++) {
-			if (i < length - 1) {
+		nodes[0] = new LinkedListNode(3, null, null);
+		nodes[1] = new LinkedListNode(5, null, null);
+		nodes[2] = new LinkedListNode(8, null, null);
+		nodes[3] = new LinkedListNode(5, null, null);
+		nodes[4] = new LinkedListNode(10, null, null);
+		nodes[5] = new LinkedListNode(2, null, null);
+		nodes[6] = new LinkedListNode(1, null, null);
+		// for (int i = 0; i < length; i++) {
+		// 	nodes[i] = new LinkedListNode(i >= length / 2 ? length - i - 1 : i, null, null);
+		// }
+
+		for (int i = 0; i < length - 1; i++) {
+			//if (i < length - 1) {
 				nodes[i].setNext(nodes[i + 1]);
-			}
-			if (i > 0) {
-				nodes[i].setPrevious(nodes[i - 1]);
-			}
+			//}
+			// if (i > 0) {
+			// 	nodes[i].setPrevious(nodes[i - 1]);
+			// }
 		}
 		
 		LinkedListNode head = nodes[0];
 		System.out.println(head.printForward());
 		
-		LinkedListNode h = partition(head, 8);
+		LinkedListNode h = partition(head, 5);
 		System.out.println(h.printForward());
 	}
 
