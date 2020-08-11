@@ -1,4 +1,3 @@
-package Q7_01_Deck_of_Cards;
 
 public enum Suit { 
 	Club (0),

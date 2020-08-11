@@ -1,4 +1,3 @@
-package Q7_01_Deck_of_Cards;
 
 public abstract class Card {
 	private boolean available = true;

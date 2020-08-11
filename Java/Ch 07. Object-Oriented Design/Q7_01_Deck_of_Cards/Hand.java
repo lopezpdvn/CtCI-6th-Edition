@@ -1,5 +1,3 @@
-package Q7_01_Deck_of_Cards;
-
 import java.util.ArrayList;
 
 public class Hand <T extends Card> {
