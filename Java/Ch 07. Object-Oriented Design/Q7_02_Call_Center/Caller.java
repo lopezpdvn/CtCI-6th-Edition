@@ -1,4 +1,3 @@
-package Q7_02_Call_Center;
 
 public class Caller {
 	private String name;

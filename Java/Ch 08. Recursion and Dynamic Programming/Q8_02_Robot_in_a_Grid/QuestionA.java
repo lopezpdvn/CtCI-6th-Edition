@@ -36,7 +36,7 @@ public static boolean getPath(boolean[][] maze,
 public static void main(String[] args) {
   int size = 5;
   boolean[][] maze = AssortedMethods
-    .randomBooleanMatrix(size, size, 70);
+    .randomBooleanMatrix(size, size, 80);
   AssortedMethods.printMatrix(maze);
 
   ArrayList<Point> path = getPath(maze);

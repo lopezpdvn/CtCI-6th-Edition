@@ -1,4 +1,3 @@
-package Q7_02_Call_Center;
 
 public enum Rank {
 	Responder (0),
