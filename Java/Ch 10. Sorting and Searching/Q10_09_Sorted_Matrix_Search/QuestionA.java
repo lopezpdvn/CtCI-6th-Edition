@@ -3,6 +3,8 @@ import CtCILibrary.*;
 
 public class QuestionA {
 
+// Binary Search like algorithm where we shrink
+// the matrix from top right to bottom left.
 public static boolean findElement(
     int[][] matrix, int elem) {
   int row = 0;
