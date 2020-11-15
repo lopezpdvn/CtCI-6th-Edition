@@ -29,13 +29,14 @@ static void printPerms(
 }
 public static void main(String[] args) {
   //String s = "aabbccc";
-  String s = "ab";
+  String s = "aaabb";
   ArrayList<String> result = printPerms(s);
   System.out.println("Count: " + result.size());
   for (String r : result) {
     System.out.println(r);
   }
 }
+<<<<<<< HEAD
 static HashMap<Character, Integer>
   buildFreqTable(String s) {
   HashMap<Character, Integer> map =
@@ -47,4 +48,18 @@ static HashMap<Character, Integer>
   }
   return map;
 }
+=======
+/* Count: 10
+aaabb
+aabab
+aabba
+abaab
+ababa
+abbaa
+baaab
+baaba
+babaa
+bbaaa */
+
+>>>>>>> 93e2b6215e422a2bac0d3e4838fe2d33d87962f1
 }
