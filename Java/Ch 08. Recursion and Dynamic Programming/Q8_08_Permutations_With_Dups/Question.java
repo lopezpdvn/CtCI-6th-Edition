@@ -5,16 +5,12 @@ import java.util.HashMap;
 
 public class Question {	
 
-static HashMap<Character, Integer>
-  buildFreqTable(String s) {
+static ArrayList<String> printPerms(String s) {
+  ArrayList<String> ans =new ArrayList<String>();
   HashMap<Character, Integer> map =
-    new HashMap<Character, Integer>();
-  for (char c : s.toCharArray()) {
-    if (!map.containsKey(c))
-      map.put(c, 0);
-    map.put(c, map.get(c) + 1);
-  }
-  return map;
+    buildFreqTable(s);
+  printPerms(map, "", s.length(), ans);
+  return ans;
 }
 static void printPerms(
   HashMap<Character, Integer> map, String prefix,
@@ -31,13 +27,6 @@ static void printPerms(
         map, prefix + c, remaining - 1, result);
       map.put(c,  count); } }
 }
-static ArrayList<String> printPerms(String s) {
-  ArrayList<String> ans =new ArrayList<String>();
-  HashMap<Character, Integer> map =
-    buildFreqTable(s);
-  printPerms(map, "", s.length(), ans);
-  return ans;
-}
 public static void main(String[] args) {
   //String s = "aabbccc";
   String s = "ab";
@@ -47,5 +36,15 @@ public static void main(String[] args) {
     System.out.println(r);
   }
 }
-
+static HashMap<Character, Integer>
+  buildFreqTable(String s) {
+  HashMap<Character, Integer> map =
+    new HashMap<Character, Integer>();
+  for (char c : s.toCharArray()) {
+    if (!map.containsKey(c))
+      map.put(c, 0);
+    map.put(c, map.get(c) + 1);
+  }
+  return map;
+}
 }
