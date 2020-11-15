@@ -40,12 +40,23 @@ static ArrayList<String> printPerms(String s) {
 }
 public static void main(String[] args) {
   //String s = "aabbccc";
-  String s = "ab";
+  String s = "aaabb";
   ArrayList<String> result = printPerms(s);
   System.out.println("Count: " + result.size());
   for (String r : result) {
     System.out.println(r);
   }
 }
+/* Count: 10
+aaabb
+aabab
+aabba
+abaab
+ababa
+abbaa
+baaab
+baaba
+babaa
+bbaaa */
 
 }
