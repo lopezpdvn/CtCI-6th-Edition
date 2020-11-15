@@ -36,7 +36,6 @@ public static void main(String[] args) {
     System.out.println(r);
   }
 }
-<<<<<<< HEAD
 static HashMap<Character, Integer>
   buildFreqTable(String s) {
   HashMap<Character, Integer> map =
@@ -48,7 +47,8 @@ static HashMap<Character, Integer>
   }
   return map;
 }
-=======
+}
+
 /* Count: 10
 aaabb
 aabab
@@ -60,6 +60,3 @@ baaab
 baaba
 babaa
 bbaaa */
-
->>>>>>> 93e2b6215e422a2bac0d3e4838fe2d33d87962f1
-}
