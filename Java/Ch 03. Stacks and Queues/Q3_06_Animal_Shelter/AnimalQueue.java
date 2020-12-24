@@ -14,9 +14,8 @@ public class AnimalQueue {
 			dogs.addLast((Dog) a);
 		} else if (a instanceof Cat) {
 			cats.addLast((Cat)a);
-		}
-	}
-	
+		} }
+
 	public Animal dequeueAny() {
 		if (dogs.size() == 0) {
 			return dequeueCats();
@@ -29,8 +28,7 @@ public class AnimalQueue {
 			return dogs.poll();
 		} else {
 			return cats.poll();
-		}
-	}
+		} }
 	
 	public Animal peek() {
 		if (dogs.size() == 0) {
@@ -44,25 +42,20 @@ public class AnimalQueue {
 			return dog;
 		} else {
 			return cat;
-		}
-	}
+		} }
 	
 	public int size() {
 		return dogs.size() + cats.size();
 	}
-	
 	public Dog dequeueDogs() {
 		return dogs.poll();
 	}
-	
 	public Dog peekDogs() {
 		return dogs.peek();
 	}
-	
 	public Cat dequeueCats() {
 		return cats.poll();
 	}
-	
 	public Cat peekCats() {
 		return cats.peek();
 	}
